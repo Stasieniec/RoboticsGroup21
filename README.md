@@ -9,13 +9,21 @@ Our team focused on the detection and manipulation of simple, graspable objects 
 ## Individual Contributions
 
 - **Jules:**
-  - something
+  - Involved in conceptual discussion and programming solutions, as well as the presentation.
+  - Worked on grasp configuration and object detection
+  - Debugging grasp configuration
 - **Stanisław:**
-  - something
+  - Involved in conceptual discussion and programming solutions, as well as the presentation.
+  - Worked on grasp configuration and object detection
+  - Supported debugging efforts and grasp configuration
 - **Aditya:**
-  - something
+  - Involved in conceptual discussion and programming solutions, as well as the presentation.
+  - Focused on setting up the robot and the MoveIt environment.
+  - Debugging in the initial setup stage
 - **Fleur:**
-  - something
+  - Involved in conceptual discussion and programming solutions, as well as the presentation.
+  - Worked setting up the environment and the grasping mechanic, created design and drawings for the presentation.
+  - Involved in debugging and optimization of the grasping setup.
 
 
 ## Solution
@@ -196,12 +204,9 @@ This launch file initializes the simulation environment with the required parame
   - The head tilt mechanism is crucial for detecting objects within the environment.
 
 - **Gripper Configuration:**
-  - Verify the robot's gripper dimensions and limits to match the object sizes for successful grasping.
   - Adjust the gripper's pre-grasp and grasp postures as needed for different objects.
 
-- **Collision Avoidance:**
-  - Keeping the planning scene updated with collision objects is essential to prevent the robot from planning paths that collide with objects or the environment.
-
 - **Future Improvements:**
+  - Implement picking up the objects. 
   - Implement interaction with complex, non-graspable objects (big ball and big cylinder) by developing pushing or knocking strategies.
   - Enhance the state machine to include actions like moving the object to the corresponding mat after picking.
