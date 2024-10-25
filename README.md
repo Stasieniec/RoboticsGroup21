@@ -11,7 +11,7 @@ Our team focused on the detection and manipulation of simple, graspable objects 
 - **Jules:**
   - Involved in conceptual discussion and programming solutions, as well as the presentation.
   - Worked on grasp configuration and object detection
-  - Debugging grasp configuration
+  - Debugging grasp actions and configuration
 - **Stanisław:**
   - Involved in conceptual discussion and programming solutions, as well as the presentation.
   - Worked on grasp configuration and object detection
