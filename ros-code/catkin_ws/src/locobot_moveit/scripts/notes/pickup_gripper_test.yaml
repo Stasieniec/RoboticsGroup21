@@ -1,0 +1,149 @@
+rostopic pub -1 /locobot/pickup/goal moveit_msgs/PickupActionGoal '{
+  "header": {
+    "seq": 0,
+    "stamp": { "secs": 0, "nsecs": 0 },
+    "frame_id": "locobot/camera_link"
+  },
+  "goal": {
+    "target_name": "red_cube",
+    "group_name": "interbotix_arm",
+    "end_effector": "interbotix_gripper",
+    "possible_grasps": [
+      {
+        "grasp_pose": {
+          "header": { "frame_id": "locobot/camera_link" },
+          "pose": {
+            "position": { "x": 0.5848758678534618, "y": -0.11733496873985429, "z": -0.3184498202651479 },
+            "orientation": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0 }
+          }
+        },
+        "pre_grasp_posture": {
+          "header": { "frame_id": "locobot/camera_link" },
+          "joint_names": ["right_finger", "left_finger"],
+          "points": [
+            {
+              "positions": [0.04, 0.04],  # Open positions for both fingers
+              "time_from_start": { "secs": 0, "nsecs": 0 }
+            }
+          ]
+        },
+        "grasp_posture": {
+          "header": { "frame_id": "locobot/camera_link" },
+          "joint_names": ["right_finger", "left_finger"],
+          "points": [
+            {
+              "positions": [0.0, 0.0],  # Closed positions for both fingers
+              "time_from_start": { "secs": 1, "nsecs": 0 }
+            }
+          ]
+        },
+        "pre_grasp_approach": {
+          "direction": {
+            "header": { "frame_id": "locobot/camera_link" },
+            "vector": { "x": 0.0, "y": 0.0, "z": 0.4 }
+          },
+          "min_distance": 0.05,
+          "desired_distance": 0.1
+        },
+        "post_grasp_retreat": {
+          "direction": {
+            "header": { "frame_id": "locobot/camera_link" },
+            "vector": { "x": 0.0, "y": 0.0, "z": 0.4 }
+          },
+          "min_distance": 0.05,
+          "desired_distance": 0.1
+        },
+        "grasp_quality": 1.0
+      }
+    ],
+    "allowed_planning_time": 20.0,
+    "support_surface_name": "ground_plane",
+    "allow_gripper_support_collision": true,
+    "allowed_touch_objects": ["red_cube"]
+  }
+}'
+
+
+rostopic pub locobot/gripper_controller/command trajectory_msgs/JointTrajectory "{
+  header: {
+    seq: 0,
+    stamp: { secs: 0, nsecs: 0 },
+    frame_id: ''
+  },
+  joint_names: ['right_finger', 'left_finger'],
+  points: [
+    {
+      positions: [-0.015, 0.015],
+      time_from_start: { secs: 1, nsecs: 0 }
+    }
+  ]
+}"
+
+rostopic pub -1 /locobot/pickup/goal moveit_msgs/PickupActionGoal '{
+  "header": {
+    "seq": 0,
+    "stamp": { "secs": 0, "nsecs": 0 },
+    "frame_id": "locobot/camera_link"
+  },
+  "goal": {
+    "target_name": "red_cube",
+    "group_name": "interbotix_arm",
+    "end_effector": "interbotix_gripper",
+    "possible_grasps": [
+      {
+        "grasp_pose": {
+          "header": { "frame_id": "locobot/camera_link" },
+          "pose": {
+            "position": {
+              "x": 0.585200066461856,
+              "y": -0.11505235785852941,
+              "z": -0.2683152832069742
+            },
+            "orientation": { "x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0 }
+          }
+        },
+        "pre_grasp_posture": {
+          "header": { "frame_id": "locobot/camera_link" },
+          "joint_names": ["right_finger", "left_finger"],
+          "points": [
+            {
+              "positions": [-0.037, 0.037],
+              "time_from_start": { "secs": 0, "nsecs": 0 }
+            }
+          ]
+        },
+        "grasp_posture": {
+          "header": { "frame_id": "locobot/camera_link" },
+          "joint_names": ["right_finger", "left_finger"],
+          "points": [
+            {
+              "positions": [-0.015, 0.015],
+              "time_from_start": { "secs": 1, "nsecs": 0 }
+            }
+          ]
+        },
+        "pre_grasp_approach": {
+          "direction": {
+            "header": { "frame_id": "locobot/camera_link" },
+            "vector": { "x": 0.0, "y": 0.0, "z": 0.4 }
+          },
+          "min_distance": 0.05,
+          "desired_distance": 0.1
+        },
+        "post_grasp_retreat": {
+          "direction": {
+            "header": { "frame_id": "locobot/camera_link" },
+            "vector": { "x": 0.0, "y": 0.0, "z": 0.4 }
+          },
+          "min_distance": 0.05,
+          "desired_distance": 0.1
+        },
+        "grasp_quality": 1.0
+      }
+    ],
+    "allowed_planning_time": 20.0,
+    "support_surface_name": "ground_plane",
+    "allow_gripper_support_collision": false,
+    "allowed_touch_objects": ["red_cube"]
+  }
+}'

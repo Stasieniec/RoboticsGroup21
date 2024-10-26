@@ -1,0 +1,14 @@
+Received camera image with 12 models
+[INFO] [1729090216.793378, 851.069000]: Model name: blue_target_area
+[INFO] [1729090216.802081, 851.070000]: Model name: red_target_area
+[INFO] [1729090216.805674, 851.070000]: Model name: blue_big_ball
+[INFO] [1729090216.893116, 851.085000]: Model name: red_big_ball
+[INFO] [1729090216.895041, 851.086000]: Model name: blue_big_cylinder
+[INFO] [1729090217.007851, 851.103000]: Model name: red_small_ball
+[INFO] [1729090217.010011, 851.103000]: Model name: blue_cylinder
+[INFO] [1729090217.072755, 851.104000]: Model name: blue_small_ball
+[INFO] [1729090217.101127, 851.107000]: Model name: red_cylinder
+[INFO] [1729090217.111334, 851.112000]: Model name: red_big_cylinder
+[INFO] [1729090217.176732, 851.116000]: Model name: red_cube
+[INFO] [1729090217.183401, 851.120000]: Model name: blue_cube
+[INFO] [1729090217.189510, 851.124000]: Received camera image with 12 models
